@@ -1,0 +1,31 @@
+<section class="heroContainer">
+  <h1>{{ name() }}</h1>
+
+  <section class="container">
+    <p>Nombre: {{ name() }}</p>
+    <p>Edad: {{ age() }}</p>
+    <p>Descripción: {{ getHeroDescription() }}</p>
+    <!-- <dd> {{ capitalizeName() }} </dd> -->
+    <!-- ! USANDO PIPES -->
+    <p>Capitalizado: {{ name() | uppercase }}</p>
+  </section>
+
+  <!-- Un Pipe (tubería) es una función simple que se usa en las plantillas (HTML) para transformar datos antes de mostrarlos al usuario. -->
+    <!-- {{ texto | uppercase }}
+    {{ fecha | date:'dd/MM/yyyy' }}
+    {{ fecha | date | uppercase }} -->
+
+    <!-- ya no se usa la función capitalizeName() porque se usa el pipe uppercase -->
+
+  <section class="buttons">
+    <button (click)="changeHero()">
+      Cambiar Heroe
+    </button>
+    <button (click)="changeAge()">Cambiar edad</button>
+    <button (click)="resetForm()">Reset</button>
+  </section>
+
+  <section class="heroImageContainer">
+    <img [src]="heroImage()" alt="">
+  </section>
+</section>

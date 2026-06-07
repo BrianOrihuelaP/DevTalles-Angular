@@ -1,0 +1,49 @@
+.counterContainer {
+  border: 4px solid brown;
+  padding: 20px;
+  border-radius: 10px;
+  width: 20%;
+  color: brown;
+  margin: auto;
+  box-shadow: 8px 16px 12px rgba(128, 128, 128, 0.651);
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgba(165, 53, 25, 0.329);
+}
+
+.displayCounter {
+  background: rgba(255, 255, 255, 0.356); /* fondo semitransparente */
+  border: 1px solid rgba(255, 255, 255, 0.623); /* borde tenue */
+  backdrop-filter: blur(10px); /* desenfoque de fondo */
+  -webkit-backdrop-filter: blur(5px); /* compatibilidad con Safari */
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* sombra suave */
+  color: #000;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 20px; /* un poco de espacio interior */
+  text-decoration: none;
+}
+
+.counterContainer h1{
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.sectionButtons button{
+  margin: 4px;
+  border: 2px solid rgb(204, 0, 0);
+  background-color: brown;
+  color: white;
+  padding: 4px;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sectionButtons button:hover{
+  background-color: rgb(68, 0, 0);
+  box-shadow: 4px 8px 8px rgba(255, 0, 0, 0.623);
+  transform: scale(1.05); /* Efecto de agrandamiento */
+}

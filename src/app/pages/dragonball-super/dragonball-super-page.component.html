@@ -1,0 +1,56 @@
+<h1>DragonBall Super Page</h1>
+<hr />
+
+<section class="row">
+  <div class="col-12 col-sm-5">
+    <h2>Agregar: {{ name() }}</h2>
+    <!-- * Aqui el #txtName es una referencia local que se puede usar para obtener el valor del input -->
+    <input type="text" class="form-control mb-2 w-75" placeholder="Nombre del personaje" [value]="name()"
+      (change)="name.set(txtName.value)" (input)="name.set(txtName.value)" #txtName />
+    <h2>Transformacion: {{ transformation() }}</h2>
+    <input type="text" class="form-control mb-2 w-75" placeholder="Transformación"
+      (input)="transformation.set(txtTransformacion.value)" #txtTransformacion />
+    <input type="number" class="form-control mb-2 w-75" placeholder="Ki" (input)="ki.set(txtKi.valueAsNumber)" #txtKi />
+    <input type="text" class="form-control mb-2 w-75" placeholder="Ruta de la Imagen"
+      (input)="imageSrc.set(txtImagen.value)" #txtImagen />
+
+    <button class="mt-2 btn btn-secondary" (click)="addCharacter()">Agregar</button>
+
+    @if (errorMessage() != '') {
+    <span class="alert alert-danger mt-2 fade-transition" [class.visible]="showError()">
+      {{ errorMessage() }}
+    </span>
+    }
+  </div>
+
+  <div class="col-12 col-sm-4">
+    <h2>Listado</h2>
+    <ol>
+      @for (character of characters(); track character.id) {
+      @if(character.ki > 5000) {
+      <li>
+        <span>
+          {{ character.name }}
+        </span>
+        <!-- *Clases o estilos dinamicos -->
+        <!--
+                  [ngClass]="powerClasses()"
+              -->
+        <strong [class.text-danger]="character.ki > 8000" [class.text-primary]="character.ki < 7000">
+          ({{ character.ki }})
+        </strong>
+      </li>
+      } @else {
+      <li>
+        <span> Personaje debilitado </span>
+      </li>
+      }
+      }
+    </ol>
+  </div>
+
+  <div class="col-12 col-sm-3">
+    <img src="https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg"
+      alt="dragonball" width="200px" />
+  </div>
+</section>

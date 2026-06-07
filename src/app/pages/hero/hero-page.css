@@ -1,0 +1,38 @@
+.heroContainer {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  border: 2px solid rgb(134, 10, 35);
+  box-shadow: 8px 12px 8px rgba(65, 4, 4, 0.822);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}
+
+.buttons button {
+  background-color: rgb(151, 3, 33);
+  color: white;
+  padding: 9px;
+  border-radius: 12px;
+  margin: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: rgb(68, 0, 0);
+  box-shadow: 4px 8px 8px rgba(255, 0, 0, 0.623);
+  transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+.heroImageContainer img {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  filter: drop-shadow(4px 4px 6px rgba(255, 5, 5, 0.712));
+  width: 480px;
+  margin: 20px auto;
+}
