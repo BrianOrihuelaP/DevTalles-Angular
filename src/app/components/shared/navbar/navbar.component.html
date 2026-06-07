@@ -1,0 +1,14 @@
+<nav class="navBar">
+  <ul>
+    <li class="logo"><img src="https://pluspng.com/img-png/angular-logo-png-angular-icon-512x512.png" alt=""></li>
+    <!-- *En angular se usa el propio Router Link para reedirigir y no el href -->
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+        <!-- Para decirle que quiero exactamente el path / para que me pinte el estilo (exact true) -->
+        Contador
+      </a>
+    </li>
+    <li><a routerLink="/hero" routerLinkActive="active">Heroes</a></li>
+    <li><a routerLink="/dragonball" routerLinkActive="active">Dragon Ball</a></li>
+    <li><a routerLink="/dragonball-super" routerLinkActive="active">Dragon Ball Super</a></li>
+  </ul>
+</nav>
